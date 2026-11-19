@@ -1,26 +1,149 @@
-@import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+  color: #202938;
+  font-family: Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page {
+  width: min(1100px, calc(100% - 32px));
+  margin: 40px auto;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h1,
+section h2,
+.user-form h2 {
+  margin: 0 0 8px;
+}
+
+.page-header p {
+  margin: 0;
+  color: #667085;
+}
+
+.user-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+}
+
+.user-form h2,
+.form-actions {
+  grid-column: 1 / -1;
+}
+
+.user-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.user-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cfd4dc;
+  border-radius: 5px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: white;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 15px;
+  border-bottom: 1px solid #eaecf0;
+}
+
+th {
+  color: #344054;
+}
+
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+
+.button {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.add-button {
+  background: #16a34a;
+}
+
+.update-button {
+  background: #eab308;
+  color: #282000;
+  
+}
+
+.delete-button {
+  background: #dc2626;
+}
+
+.cancel-button {
+  background: #667085;
+}
+
+.empty-message {
+  color: #667085;
+  text-align: center;
+}
+
+.user-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 90%;
+  
+}
+.close{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  
+}
+
+.h2{
+  padding: 10px;
+  margin: auto;
 }
